@@ -1,0 +1,116 @@
+#include <stdio.h>
+struct food
+{
+    int code[2];
+    char name[11];
+    char size[5];
+    int quantity[2];
+};
+int main()
+{
+    int i1;
+    int n,i=0,l;
+    int sum=0,sum1=0,sum2=0,sum3=0,sum4=0,sum5=0,sum6=0;
+    struct food f;
+    void sleep()
+{
+   int l = 0;
+   while (i < 1e10)  { i++; }
+}
+    
+    printf("\n\n-----------------------------------------WELCOME TO COFFEE BAR-----------------------------------------");
+    printf("\nEnter your name :");
+    gets(f.name);
+    while(i1!=4)
+    {
+    printf("\n1. Order");
+    printf("\n2. Serve");
+    printf("\n3. Display");
+    printf("\n4. Exit the program");
+    
+    
+    printf("\n\nEnter your choice option %s :",f.name);
+    scanf("%d",&i1);
+    
+    if(i1==1)
+    {
+    //printf("Enter your name :");
+    //gets(f.name);
+    printf("\n-----------------------------------------MENU-----------------------------------------");
+    printf("\nITEM CODE                            DESCRIPTION                                  PRICE");
+    printf("\n   11.----------------------------------Latte--------------------------------------199");
+    printf("\n   12.--------------------------------Cappiccino-----------------------------------209");
+    printf("\n   13.--------------------------------Espresso------------------------------- -----199");
+    printf("\n   14.--------------------------------Americano---------------------- -------------179");
+    printf("\n   15.----------------------------------Mocha-------------------------- -----------199");
+    printf("\n   16.---------------------------------Machiato------------------------------------189");
+    
+    printf("\nHow many items you want to order :");
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+    {
+        printf("\n\nEnter details of item %d :-",i+1);
+        printf("\nEnter the item code :");
+        scanf("%d",&f.code[i]);
+        printf("Enter quantity :");
+        scanf("%d",&f.quantity[i]);
+        
+        if(f.code[i]==11)
+        {
+            sum1=f.quantity[i]*199;
+                printf("%d %s Latte",f.quantity[i],f.size);
+                printf(" Cost : %d",sum1);
+        }
+        if(f.code[i]==12)
+        {
+            sum2=f.quantity[i]*209;
+                printf("%d %s Cappiccino",f.quantity[i],f.size);
+                printf(" Cost : %d",sum2);
+        }if(f.code[i]==13)
+        {
+            sum3=f.quantity[i]*199;
+                printf("%d %s Espresso",f.quantity[i],f.size);
+                printf(" Cost : %d",sum3);
+        }
+        if(f.code[i]==14)
+        {
+            sum4=f.quantity[i]*179;
+                printf("%d %s Americano",f.quantity[i],f.size);
+                printf(" Cost : %d",sum4);
+        }
+        if(f.code[i]==15)
+        {
+            sum5=f.quantity[i]*199;
+                printf("%d %s Mocha",f.quantity[i],f.size);
+                printf(" Cost : %d",sum5);
+        }if(f.code[i]==16)
+        {
+            sum6=f.quantity[i]*189;
+                printf("%d %s Machiato",f.quantity[i],f.size);
+                printf(" Cost : %d",sum6);
+        }
+    }
+    sum=sum1+sum2+sum3+sum4+sum5+sum6;
+    printf("\n\nYour total price is : %d",sum);
+    
+    printf("\n\nNo. of items ordered : %d",n);
+    printf("\n\nThank you for ordering from COFFEE BAR\n\n");
+    }
+    else if(i1==2)
+    {
+        printf("Order no. 001 of %s is ready",f.name);
+        printf("\n\n                                 Enjoy your meal:)");  
+    }
+    else if(i1==3)
+    {
+        printf("\n\nTotal no. of customers served : 1");
+        printf("\nTotal No. of items served : %d",n);
+        printf("\nTotal amount collected : %d",sum);
+        printf("\nNo. of orders under preparation : 0");
+    
+    }
+    else
+    printf("---------------------------------------Thank you...Visit again---------------------------------------");
+}
+}
